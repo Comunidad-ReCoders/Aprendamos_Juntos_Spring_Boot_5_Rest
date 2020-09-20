@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fonda ReCoders - Productos</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+    <!-- CSS Propio -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+	<header class="container-fluid">
+		<h1 class="text-center">Bienvenido a la Fonda ReCoders</h1>
+	</header>
+	<main class="container-fluid">
+		<div>
+			<h2>Lista de productos</h2>
+		</div>
+		<div class="container">
+			<div th:if="${#lists.isEmpty(productos)}">
+				<p>No hay nada...</p>
+			</div>
+			<div th:each="producto: ${productos}">
+				<p th:text="${'ID: ' + producto.id}">Id: 1</p>
+				<p th:text="${'Nombre: ' + producto.nombre}">Nombre: Chicha</p>
+				<p th:text="${'Descripción: ' + producto.descripcion}">Descripción: Chicha de Curacaví</p>
+				<p th:text="${'Precio: ' + producto.precio}">Precio: 1500</p>
+			</div>
+		</div>
+		<a th:href="@{/}" href="../home.html" class="btn btn-primary">Volver al inicio</a>
+	</main>
+	</div>
+</body>
+</html>

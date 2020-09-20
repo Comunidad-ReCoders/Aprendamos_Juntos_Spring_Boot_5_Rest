@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fonda ReCoders - Inicio</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+    <!-- CSS Propio -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+	<header class="jumbotron">
+		<h1 class="text-center">Bienvenido a la Fonda ReCoders</h1>
+		<p>La fonda más prendida del 2020</p>
+	</header>
+	<main class="container-fluid">
+		<div class="container">
+			<a th:href="@{/productos/list}" href="productos.html" class="btn btn-primary">Productos</a>
+		</div>
+	</main>
+	</div>
+</body>
+</html>
